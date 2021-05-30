@@ -1,0 +1,76 @@
+.Container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 600px;
+    margin: 30px auto;
+    background: #343a40;
+    opacity: 90%;
+    padding: 40px;
+    border-radius: 10px;
+    min-height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+/*FORM ELEMENTS*/
+/*FORM elements*/
+.formLabel {
+    font-size:18px;
+    position: relative;
+    display:flex;
+    flex-direction:column;
+}
+.formLabelError {
+    color: red;
+    font-size: 15px;
+}
+/* .formLabel input[type=text]:focus:active, .formLabel input[type=text]:active {
+    border-color: orange;
+} */
+.formLabel input[type=text],.formLabel input[type=password], .formLabel input[type=email]{
+    left:10px;
+    font-size:16px;
+    font-weight: 600;
+    height: 35px;
+    min-width: 325px;
+    border: 0.75px solid #d6d6d6;
+    border-radius: 3px;
+    text-indent: 15px;
+}
+.formLabel input[type=text].success {
+    border: 1px solid green;
+}
+.formLabel input[type=text].fail {
+    border: 1px solid red;
+}
+.customTextBox {
+    color: orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.customTextBox input[type=text] {
+    text-indent:45px;
+}
+.textBoxIcon {
+    position: absolute;
+    left:10px;
+    color:black;
+    width:50px;
+    height:50px;
+}
+.textArea textarea {
+    height:100px;
+    min-width:325px;
+    font-size:16px;
+    font-weight: 600;
+    text-indent: 15px;
+    resize:none;
+    border: 0.75px solid #d6d6d6;
+}
+.element {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
