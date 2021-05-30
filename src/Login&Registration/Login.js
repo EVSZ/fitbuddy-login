@@ -1,7 +1,8 @@
-import './Login.css';
 import { Button, Form } from 'react-bootstrap'
 import React, { useState } from 'react';
 import axios from 'axios';
+
+import './Login.css';
 
 function Login() {
     const [state, setState] = useState(true);
@@ -27,7 +28,6 @@ function Login() {
     return (
         <section className="Container">
             <div>
-                <h1>SUHHH BRO IM FROM LOCALHOST:3001 </h1>
                 <h2>
                     {state ? "Login" : "Registration"}
                 </h2>
@@ -104,17 +104,15 @@ function Login() {
                         <div>
                             <Button
                                 variant="danger"
-                                className="submitButton"
                                 type="submit"
                                 data-testid="formSubmitBtn"
                             >
                                 {state ? "Login" : "Sign-Up"}
                             </Button>
                         </div>
-                        <div>
+                        <div>    
                             <Button
                                 variant="outline-info"
-                                className="submitButton"
                                 onClick={() => {
                                     setState(!state)
                                     setEmail("")

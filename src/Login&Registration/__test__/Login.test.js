@@ -1,10 +1,13 @@
+/**
+ * @jest-environment jsdom
+ */
+import React from 'react';
 import { fireEvent, screen} from "@testing-library/react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 
 import Login from '../Login';
-
-let container = null
+let container = null;
 
 beforeEach(() => {
     container = document.createElement("div")

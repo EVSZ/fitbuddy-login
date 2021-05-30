@@ -2,13 +2,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 600px;
+    max-width: 500px;
+    max-height: 500px;
     margin: 30px auto;
     background: #343a40;
     opacity: 90%;
     padding: 40px;
     border-radius: 10px;
-    min-height: 600px;
     justify-content: center;
     align-items: center;
 }
@@ -16,6 +16,7 @@
 /*FORM elements*/
 .formLabel {
     font-size:18px;
+    color:aliceblue;
     position: relative;
     display:flex;
     flex-direction:column;
@@ -24,9 +25,6 @@
     color: red;
     font-size: 15px;
 }
-/* .formLabel input[type=text]:focus:active, .formLabel input[type=text]:active {
-    border-color: orange;
-} */
 .formLabel input[type=text],.formLabel input[type=password], .formLabel input[type=email]{
     left:10px;
     font-size:16px;
@@ -73,4 +71,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.ButtonContainer {
+    display: flex;
+    flex-direction: column;
+}
+.ButtonContainer div{
+    margin-bottom: 5px;
 }
