@@ -117,3 +117,21 @@ it("It shows when password does not match while filling out form", () => {
     })
     expect(message.innerHTML).toBe("")
 })
+
+it("Logs in a registered user", () => {
+   act(() => {
+       render(<Login />, container)
+   })
+
+   const button = document.querySelector("[data-testid=formSubmitBtn]")
+   const username = document.querySelector("[data-testid=username]")
+   const password = document.querySelector("[data-testid=password]")
+
+   act(() => {
+       fireEvent.change(username, { target: { value: "evsz"}})
+       fireEvent.change(password, { target: { value: "2College"}})
+   })
+   expect(username.value).toBe("evsz")
+   expect(password.value).toBe("2College")
+
+})
