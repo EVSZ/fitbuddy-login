@@ -140,7 +140,7 @@ function Login() {
                     </div>
                     {!PasswordMatching() && !state ?
                         <h6 data-testid="passError">password does not match </h6>
-                        : <> </>}
+                        : null}
                     <div className="ButtonContainer">
                         <div>
                             <Button
