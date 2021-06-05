@@ -70,7 +70,8 @@ function Login() {
                     {state ? "Login" : "Registration"}
                 </h2>
             </div>
-            <div className="Form">
+            <div className="Form"
+                data-testid="mainContainer">
                 <Form
                     onSubmit={(e) => {
                         e.preventDefault();
@@ -139,7 +140,7 @@ function Login() {
                     </div>
                     {!PasswordMatching() && !state ?
                         <h6 data-testid="passError">password does not match </h6>
-                        : null}
+                        : <> </>}
                     <div className="ButtonContainer">
                         <div>
                             <Button

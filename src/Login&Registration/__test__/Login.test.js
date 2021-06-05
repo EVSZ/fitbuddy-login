@@ -90,32 +90,32 @@ it("It shows when password does not match while filling out form", () => {
 
     const button = document.querySelector("[data-testid=formSwitchBtn]")
     const password = document.querySelector("[data-testid=password]")
-    const message = document.querySelector("[data-testid=passError]")
+    const page = document.querySelector("[data-testid=mainContainer]")
 
     //switch to registration page
     act(() => {
         fireEvent.click(button)
     });
-    expect(message.innerHTML).toBe("")
+    expect(page.textContent).not.toContain("password does not match")
 
     //fill in password 1
     act(() => {
         fireEvent.change(password, { target: { value: "evsz" } })
     })
-    expect(message.innerHTML).toBe("password does not match")
+    expect(page.textContent).toContain("password does not match")
 
     //fill in password 2 (not matching)
     const pass = screen.getByTestId("passCheck")  
     act(() => {
         fireEvent.change(pass, { target: { value: "mati" } })
     })
-    expect(message.innerHTML).toBe("password does not match")
+    expect(page.textContent).toContain("password does not match")
 
     //fill in password 2 (matching)
     act(() => {
         fireEvent.change(pass, { target: { value: "evsz" } })
     })
-    expect(message.innerHTML).toBe("")
+    expect(page.textContent).not.toContain("password does not match")
 })
 
 it("Logs in a registered user", () => {
